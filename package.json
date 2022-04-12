@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd --respawn --transpile-only index.ts"
+    "build": "tsc",
+    "start": "node dist/index.ts",
+    "dev": "tsnd --respawn --transpile-only src/index.ts"
   },
   "dependencies": {
     "apollo-server": "^3.6.7",
