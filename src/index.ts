@@ -1,4 +1,6 @@
 import "reflect-metadata";
+import "dotenv/config";
+
 import path from 'path';
 import { ApolloServer } from 'apollo-server'
 import { buildSchema } from 'type-graphql'
@@ -16,7 +18,7 @@ async function main(){
     schema
   })
 
-  const { url } = await server.listen(); 
+  const { url } = await server.listen(process.env.PORT || 3333); 
   console.log(`server running on ${url}`);
 }
 
